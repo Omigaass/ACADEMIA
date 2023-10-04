@@ -61,7 +61,7 @@ h2{
     width: 150px;
     height: 50px;
     font-size: 1.5em;
-    color: #e1e1e1;
+    color: #1e1c2a;
     cursor: pointer;
 }
 
@@ -84,31 +84,21 @@ h2{
     position: relative;
     margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 2px solid #1e1c2a;
 }
 .inputbox label{
     position: absolute;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #e1e1e1;
+    color: #1e1c2a;
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
 }
-
-.inputbox input::placeholder {
-    color: transparent;
-}
-
-.inputbox input:focus::placeholder,
-.inputbox input:focus-within::placeholder {
-    color: transparent;
-}
-
 input:focus ~ label,
-input:not(:placeholder-shown) ~ label {
-    top: -5px;
+input:valid ~ label{
+top: -5px;
 }
 .inputbox input {
     width: 100%;
@@ -118,12 +108,12 @@ input:not(:placeholder-shown) ~ label {
     outline: none;
     font-size: 1em;
     padding:0 35px 0 5px;
-    color: #e1e1e1;
+    color: #1e1c2a;
 }
 .inputbox ion-icon{
     position: absolute;
     right: 8px;
-    color: #e1e1e1;
+    color: #1e1c2a;
     font-size: 1.2em;
     top: 20px;
 }
