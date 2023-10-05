@@ -6,16 +6,23 @@
     <title>Usuário</title>
 
     <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
 
     <!--custom css file link-->
-    <link rel="stylesheet" href="css2/usuario.css">
+    <link rel="stylesheet" href="CSS/usuario.css">
 
 </head>
 <body>
 
     <!--header section starts-->
     <header>
+        
+        <div class="return_btn">
+            <a href="home.html"><i class="fa-solid fa-turn-down-left"></i></a>
+        </div>
         <div class="user">
             <img src="img/foto.jpg" alt="">
             <h3 class="name">Maria Luiza</h3>
@@ -103,28 +110,24 @@
 
 
             <div class="box">
-                <i class="fas fa-graduation-cap"></i>
                 <span>Julho</span><P></P>
                 <h3>Treino de Corrida</h3>
                 <p>Foco: corridas <br><br> * Fartlek  <br> * Tempo Run <br> * Rodagem <br> * Longão <br> * Progressivo <br> * Pirâmide</p>
             </div>
 
             <div class="box">
-                <i class="fas fa-graduation-cap"></i>
                 <span>Agosto</span><P></P>
                 <h3>Treino de Perna</h3>
                 <p>Foco: fortalecer as pernas <br><br> * Agachamento  <br> * Extensora<br> * Leg press <br> * Stiff <br> * Flexora deitada </p>
             </div>
 
             <div class="box">
-                <i class="fas fa-graduation-cap"></i>
                 <span>Setembro </span><P></P>
                 <h3>Treino de Musculação</h3>
                 <p>Foco: crescer mais os musculos <br><br>* Hipertrofia muscular <br> *Potência muscular <br> *Resistência muscular <br> *Treino HIT <br> *Força Muscular</p>
             </div>
 
             <div class="box">
-                <i class="fas fa-graduation-cap"></i>
                 <span>Outubro/atual</span><P></P>
                 <h3>Treino de Crossfit</h3>
                 <p>Foco: crossfit  <br><br>* Flexão de barra*  Barra fixa <br> * Corda <br> * Rope <br> * Levantamento de peso <br> * Burpee</p>
@@ -171,16 +174,38 @@
     <!-- scroll top button-->
 
 <a href="#home" class="top">
-    <img src="img/joana.jpg" alt="">
+    <i class="fa-solid fa-up-left fa-2x"></i>
 </a>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
 
+        $('#menu').click(function () {
+            $(this).toggleClass('fa-times');
+            $('header').toggleClass('toggle');
+        });
 
+        $(window).on('scroll load', function () {
 
-    <!--jquery cdn link-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!--custom js file link-->
-    <script src="JS/usuario.js"></script>
+            $('#menu').removeClass('fa-times');
+            $('header').removeClass('toggle');
+        });
+
+        // smooth scrolling
+
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+
+            $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top,
+                },
+                500,
+                'linear'
+            );
+        });
+    });
+</script>
 
 </body>
 </html>

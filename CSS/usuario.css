@@ -91,9 +91,30 @@ header{
     background: #151120;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-flow: column;
     text-align: center;
+}
+
+header .return_btn{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .return_btn a{
+    padding: 1rem 8rem;
+    margin: 0;
+    background: #28213a;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .return_btn a:hover{
+    background: var(--laranja);
 }
 
 header .user img{
@@ -126,7 +147,7 @@ header .navbar ul{
 
 header .navbar ul li a{
     display: block;
-    padding: 1rem;
+    padding: 1rem 8rem;
     margin: 1.5rem 0;
     background: #28213a;
     color: #fff;
@@ -266,16 +287,6 @@ header .navbar ul li a:hover{
     padding: 1rem 0;
 }
 
-.education .box-container .box i{
-    position: absolute;
-    top: -1.5rem;
-    left: -2.5rem;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-   
-}
-
 
 .contact .row{
     display: flex;
@@ -339,15 +350,18 @@ header .navbar ul li a:hover{
 
 .top{
     position: fixed;
-    bottom: 7.5rem;
+    bottom: 2rem;
     right: 2rem;
+    width: 5em;
+    height: 5rem;
+    background-color: #1d172c;
+    color: var(--laranja);
+    border-radius: 50%;
     z-index: 100;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-
 
 
 
